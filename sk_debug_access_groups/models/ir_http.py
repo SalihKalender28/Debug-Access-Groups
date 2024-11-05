@@ -6,7 +6,7 @@ def _get_debug_group(user):
     if not user:
         user_id = request.session.uid
         user = request.env['res.users'].sudo().search([('id', '=', user_id)], limit=1)
-    result = 1 if user.has_group('sk_debug_access_groups.group_always_debug') else '' if user.has_group('sk_debug_access_groups.group_never_debug') else "Normal"
+    result = (1 if user.has_group('sk_debug_access_groups.group_always_debug') else '' if user.has_group('sk_debug_access_groups.group_never_debug') else "Normal") if user else "Normal"
     return result
 
 
