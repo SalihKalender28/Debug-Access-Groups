@@ -7,7 +7,7 @@
     'website': "https://github.com/SalihKalender28",
     'category': 'Tools',
     'version': '0.1',
-    'depends': ['base'],
+    'depends': ['web'],
     'data': ['security/security.xml'],
     'images': [
         'static/description/banner.png',
